@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_loans_loans,loans.loans,model_loans,,1,1,1,1
+access_salary_advance,salary.advance,model_salary_advance,,1,1,1,1
+access_loans_loans_line,loans.loans_line,model_loans_line,,1,1,1,1
+access_type_loan_advance,loans.type_loan_advance,model_type_loan_advance,,1,1,1,1
+access_violations_violations,violations.violations,model_violations,,1,1,1,1
+access_violations_violations_line,loans.violations_line,model_violations_line,,1,1,1,1
+violation_category,violation_category,model_violation_category,,1,1,1,1
+violation_category_line,violation_category_line,model_violation_category_line,,1,1,1,1
+penalty_violation,penalty_violation,model_penalty_violation,,1,1,1,1

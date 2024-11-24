@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Inherit kanban View to Modify it -->
+    <record id="picking_type_kanban_inherit_one" model="ir.ui.view">
+        <field name="name">Hide New</field>
+        <field name="model">stock.picking.type</field>
+        <field name="inherit_id" ref="stock.stock_picking_type_kanban"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[hasclass('row')]/div[2]" position="replace">
+                <div class="col-6 o_kanban_card_manage_section o_kanban_manage_new">
+                    <h5 role="menuitem" class="o_kanban_card_manage_title" groups="stock.group_stock_manager">
+                        <a name="%(stock.action_picking_form)d" type="action">New</a>
+                    </h5>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

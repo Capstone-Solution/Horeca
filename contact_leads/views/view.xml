@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- <record id="res_partner_form_inherit_fields_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.fields</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="contact_leads.res_partner_form_inherit_fields"/>
+        <field name="arch" type="xml">
+        <xpath expr="//div[hasclass('o_address_format')]" position="replace">
+            <div class="o_address_format">
+                <field name="street" placeholder="Street..." class="o_address_street" readonly="type == 'contact' and parent_id"/>
+                <field name="street2" placeholder="Street 2..." class="o_address_street" readonly="type == 'contact' and parent_id"/>
+                <field name="city" placeholder="City" class="o_address_city" readonly="type == 'contact' and parent_id" invisible="1"/>
+                <field name="state_id" class="o_address_state" placeholder="Government" options="{'no_open': True, 'no_quick_create': True}" readonly="type == 'contact' and parent_id" context="{'country_id': country_id, 'default_country_id': country_id, 'zip': zip}"/>
+                <field name="zip" invisible='1' placeholder="area" class="o_address_zip" readonly="type == 'contact' and parent_id"/>
+                <field name='area_id'/>
+                <div name="partner_address_country" class="d-flex justify-content-between">
+                    <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" readonly="type == 'contact' and parent_id"/>
+                </div>
+            </div>
+        </xpath>
+        </field>
+    </record> -->
+    <record id="res_partner_form_inherit_fields" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.fields</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="phone" position="attributes">
+                <attribute name="string">phone1</attribute>
+            </field>
+            <field name="mobile" position="attributes">
+                <attribute name="string">phone2</attribute>
+            </field>
+            <field name="property_payment_term_id" position='replace'></field>
+            <field name='ref' position='replace'></field>
+            <field name='user_id' position='replace'></field>
+            <xpath expr="//div[hasclass('o_address_format')]" position="replace">
+                <div class="o_address_format">
+                    <field name="street" placeholder="عنوان التوصيل" class="o_address_street"
+                           readonly="type == 'contact' and parent_id"/>
+                    <field name="street2" placeholder="عنوان التحصيل" class="o_address_street"
+                           readonly="type == 'contact' and parent_id"/>
+                    <field name="city" placeholder="City" class="o_address_city"
+                           readonly="type == 'contact' and parent_id" />
+                   
+                    <field name="state_id" class="o_address_state" placeholder="المحافظة"
+                           options="{'no_open': True, 'no_quick_create': True, 'no_create_edit': True, 'no_create': True}"
+                           readonly="type == 'contact' and parent_id"
+                           context="{'country_id': country_id, 'default_country_id': country_id, 'zip': zip}"/>
+                    <field name="zip" placeholder="area" class="o_address_zip"
+                           readonly="type == 'contact' and parent_id" invisible='1'/>
+                    <field name="areas_id" placeholder="Area Name"
+                           readonly="type == 'contact' and parent_id"
+                           options="{'no_create_edit': True, 'no_create': True}"/>
+                    <!-- <field name="areas_code" placeholder="Area Code"
+                           readonly="1"/> -->
+                    <field name="state_of_area" invisible="1"/>
+                    <div name="partner_address_country" class="d-flex justify-content-between">
+                        <field name="country_id" placeholder="Country" class="o_address_country"
+                               options='{"no_open": True, "no_create": True}'
+                               readonly="type == 'contact' and parent_id"/>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="after">
+                <!--                <field name="is_customer"/>-->
+                <!--                <field name="is_vendor"/>-->
+                <!--                <field name="client_id" readonly="1"/>-->
+                <field name="ref" string='كود العميل' readonly='1'/>
+                <field name="active" invisible="1"/>
+                <field name="ar_client_name_ar" string='اسم العميل بالعربية'/>
+                <field name="en_client_name_en" string='اسم العميل بالانجليزية'/>
+                <field name="business_name" string='اسم العميل التجاري'/>
+                <field name="client_category" string="تصنيف العميل"/>
+                <field name="restaurant_category" string='تصنيف المطعم'
+                       invisible="client_category not in ('restaurant', 'restaurant_cafe')"
+                       options="{'no_create_edit': True, 'no_create': True}"/>
+                <!--                <field name="client_business_type"/>-->
+                <field name="client_type" string="نوع مكان العميل"
+                       options="{'no_create_edit': True, 'no_create': True}"/>
+                <field name="client_status" string='حالة العميل' groups="contact_leads.group_state"/>
+                <field name="churn_suspend_reason" string='سبب التعليق او التوقف'
+                       invisible="client_status not in ('suspended')" required="client_status in ('suspended')"
+                       groups="contact_leads.group_state"/>
+                <field name="contact_person" string='اسم العميل للتواصل'/>
+                <field name="national_id" string='الرقم القومي'/>
+                <!-- <field name="discount" string='نسبة الخصم'/> -->
+                <field name="receipt_start_time" string='وقت بدء الاستلام'/>
+                <field name="receipt_end_time" string='وقت انتهاء الاستلام'/>
+                <field name="vendor" string='تابع لشركة' options="{'no_create_edit': True, 'no_create': True}"/>
+            </xpath>
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="google_map_link" string='رابط جوجل ماب'/>
+                <field name="business_anniversary" string='الذكرى السنوية للنشاط'/>
+<!--                <field name="job_title"  options="{'no_create_edit': True, 'no_create': True}"/>-->
+                <field name="gender" />
+                <field name="property_payment_term_id" string='نوع الدفع'/>
+                <!-- <field name="credit_limit_amount" string='مبلغ الحد الائتماني' 
+                       required="payment_type == 'postpaid'"/> -->
+                <!-- <field name="credit_limit_period_in_days" string='فترة الحد الائتماني بالأيام' invisible="payment_type != 'postpaid'"
+                       required="payment_type == 'postpaid'"/> -->
+<!--                <field name="sales_person" />-->
+               
+                <field name="user_id" />
+
+                <field name="telesales_support"/>
+                <field name="telesales" />
+                <field name="onground_support"   />
+                <field name="sales_channel" string="قناة البيع" options="{'no_create_edit': True, 'no_create': True}"/>
+                <!--                <field name="country_id"/>-->
+                <!--                <field name="state_id" string="Government"/>-->
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="crm_lead_view_form_fields" model="ir.ui.view">
+        <field name="name">crm.lead.form.fields</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field name="business_name"/>
+                <!--                <field name="client_business_type"/>-->
+                <!-- <field name="client_category" string='تصنيف العميل'/> -->
+                <!-- <field name="restaurant_category" string='تصنيف المطعم' attrs={'invisible': [('', '')]}/> -->
+                <!-- <field name="client_type"/> -->
+                <field name="client_category" string='تصنيف العميل'/>
+
+
+                <!--                <field name="contact_person"/>-->
+
+                <field name="gender"/>
+                <field name="national_id" string='الرقم القومي'/>
+                <!--                <field name="sales_person"/>-->
+                <field name="discount" string='نسبة الخصم'/>
+                <field name="receipt_start_time" string='وقت بدء الاستلام'/>
+                <field name="receipt_end_time" string='وقت انتهاء الاستلام'/>
+                <field name="vendor" string='تابع لشركة'/>
+                <field name="sales_channel" string='قناة البيع' options="{'no_create_edit': True, 'no_create': True}"/>
+                <field name="payment_type"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="client_view_form" model="ir.ui.view">
+        <field name="name">client_type_view_form</field>
+        <field name="model">client.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="client_type_view_tree" model="ir.ui.view">
+        <field name="name">client_type_view_tree</field>
+        <field name="model">client.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <record id="client_action" model="ir.actions.act_window">
+        <field name="name">Client Form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">client.type</field>
+        <field name="view_id" ref="contact_leads.client_type_view_tree"/>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+    <menuitem id="client_menu" name="Client Menu" parent="contacts.res_partner_menu_config" sequence="10"
+              action="client_action"/>
+
+
+
+
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+    <!-- <menuitem id="client_city_menu" name="Client City" parent="contacts.res_partner_menu_config" sequence="11"
+              action="client_city_action"/> -->
+
+    <record id="area_view_tree" model="ir.ui.view">
+        <field name="name">area_view_tree</field>
+        <field name="model">area</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="area_code"/>
+                <field name="name"/>
+                <field name="state_id" placeholder="المحافظة"/>
+                <field name="gov_code"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="client_area_action" model="ir.actions.act_window">
+        <field name="name">Client City</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">area</field>
+        <field name="view_id" ref="contact_leads.area_view_tree"/>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+
+    <menuitem id="client_area_menu" name="Client Area" parent="sale.menu_sale_config" sequence="20"
+              action="client_area_action" groups="contact_leads.group_show_area"/>
+
+    <record id="job_title_action" model="ir.actions.act_window">
+        <field name="name">Job Title</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">job.title</field>
+        <!--        <field name="view_id" ref="contact_leads.job_title_view"/>-->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+
+    <menuitem id="job_title_menu" name="Job Title" parent="sale.menu_sale_config" sequence="21"
+              action="job_title_action" groups="contact_leads.group_job_title"/>
+
+
+    <record id="client_type_action" model="ir.actions.act_window">
+        <field name="name">Client Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">client.type</field>
+        <!--        <field name="view_id" ref="contact_leads.job_title_view"/>-->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+
+    <menuitem id="client_type_menu" name="Client Type" parent="sale.menu_sale_config" sequence="21"
+              action="client_type_action" groups="contact_leads.group_client_type"/>
+
+    <record id="restaurant_category_action" model="ir.actions.act_window">
+        <field name="name">Restaurant Category</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">restaurant.category</field>
+        <!--        <field name="view_id" ref="contact_leads.job_title_view"/>-->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+
+    <menuitem id="restaurant_category_menu" name="Restaurant Category" parent="sale.menu_sale_config" sequence="23"
+              action="restaurant_category_action" groups="contact_leads.group_restaurant_category"/>
+
+    <record id="belongs_to_company_action" model="ir.actions.act_window">
+        <field name="name">Belongs to Company</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vendor.type</field>
+        <!--        <field name="view_id" ref="contact_leads.job_title_view"/>-->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+
+    <menuitem id="belongs_to_company_menu" name="Belongs To Company" parent="sale.menu_sale_config" sequence="24"
+              action="belongs_to_company_action" groups="contact_leads.group_belongs_to_company_action"/>
+
+    <record id="sales_channel_action" model="ir.actions.act_window">
+        <field name="name">Sales Channel</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sales.channel</field>
+        <!--        <field name="view_id" ref="contact_leads.job_title_view"/>-->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+
+    <menuitem id="sales_channel_menu" name="Sales Channel" parent="sale.menu_sale_config" sequence="25"
+              action="sales_channel_action" groups="contact_leads.group_sales_channel"/>
+
+</odoo>

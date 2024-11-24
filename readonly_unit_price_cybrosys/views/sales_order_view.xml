@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="sale_order_form_view_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form.view.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//button[@id='action_confirm']" position="replace">
+                <button name="action_confirm" id="action_confirm" data-hotkey="q" string="Confirm"
+                        class="btn-primary" type="object" context="{'validate_analytic': True}"
+                        groups="users_access_writes.sales_manager_sec_group" invisible="state != 'sent'"/>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="after">
+               <field name="price_unit_boolean" optional="hide"/>
+                <field name="discount_boolean" optional="hide"/>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="replace">
+                <field name="price_unit" readonly="price_unit_boolean == True or qty_invoiced &gt; 0"/>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/tree/field[@name='discount']" position="replace">
+                 <field name="discount" string="Disc.%" readonly="discount_boolean == True"
+                        groups="product.group_discount_per_so_line" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

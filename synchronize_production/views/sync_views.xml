@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Define a new action for the Sync button -->
+
+
+    <record model="ir.ui.view" id="synchronize_form_view">
+        <field name="name">Synchronize</field>
+        <field name="model">synchronize</field>
+
+        <field name="arch" type="xml">
+            <form >
+                <header>
+                        <button name="category_sync" type="object" string="Category sync" class="oe_highlight"/>
+                        <button name="unites_sync" type="object" string="Unities sync" class="oe_highlight"/>
+                        <button name="product_sync" type="object" string="Product sync" class="oe_highlight"/>
+                        <button name="contacts_sync" type="object" string="Contacts sync" class="oe_highlight"/>
+                    </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="api_url"/>
+                            <field name="token"/>
+                        </group>
+                        <group></group>
+                    </group>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_sync" model="ir.actions.act_window">
+        <field name="name">Synchronize</field>
+        <field name="res_model">synchronize</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem
+            id="menu_sync_root"
+            name="Synchronize"
+            action="action_sync"
+            web_icon="Synchronize,static/description/icon.png"
+            sequence="185"/>
+
+
+
+</odoo>

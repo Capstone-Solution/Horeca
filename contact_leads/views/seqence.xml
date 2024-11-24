@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018-2019 ForgeFlow, S.L.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0) -->
+<odoo noupdate="1">
+    <record id="seq_partner" model="ir.sequence">
+        <field name="name">Partner Sequence</field>
+        <field name="code">partner.sequence</field>
+        <field name="prefix">C_</field>
+        <field name="padding">1</field>
+        <field name="number_next">1001224</field   >
+    </record>
+</odoo>

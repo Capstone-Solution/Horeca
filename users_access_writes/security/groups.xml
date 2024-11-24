@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="sale_order_cancel_group" model="res.groups">
+        <field name="name">Sale Order Cancel</field>
+    </record>
+
+    <record id="sale_order_create_invoice" model="res.groups">
+        <field name="name">Create Invoice</field>
+    </record>
+
+    <record id="sales_product_variants_access" model="res.groups">
+        <field name="name">Sales Product Variants</field>
+    </record>
+
+    <record id="sales_category_access" model="ir.module.category">
+        <field name="name">Sales Access</field>
+    </record>
+
+    <record id="purchase_category_access" model="ir.module.category">
+        <field name="name">Purchase Access</field>
+    </record>
+
+    <record id="receivable_category_access" model="ir.module.category">
+        <field name="name">Receivable Access</field>
+    </record>
+
+    <record id="payable_category_access" model="ir.module.category">
+        <field name="name">Payable Access</field>
+    </record>
+
+    <record id="sales_manager_sec_group" model="res.groups">
+        <field name="name">Sales Manager: Sales Crm</field>
+        <field name="category_id" ref="sales_category_access"/>
+    </record>
+
+    <record id="own_document_only_group" model="res.groups">
+        <field name="category_id" ref="sales_category_access"/>
+        <field name="name">Sales: Sales Crm</field>
+    </record>
+
+    <record id="purchase_fleet_accounting_group" model="res.groups">
+        <field name="category_id" ref="purchase_category_access"/>
+        <field name="name">Purchase: Purchase Fleet Accounting</field>
+    </record>
+
+    <record id="purchase_acc_inventory_group" model="res.groups">
+        <field name="category_id" ref="payable_category_access"/>
+        <field name="name">Payable</field>
+    </record>
+
+    <record id="sales_accounting_group" model="res.groups">
+        <field name="category_id" ref="receivable_category_access"/>
+        <field name="name">Receivable</field>
+    </record>
+
+
+</odoo>

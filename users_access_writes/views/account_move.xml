@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Inherit Form View to Modify it -->
+    <record id="account_move_form_inherit_one" model="ir.ui.view">
+        <field name="name">Move Security</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//button[@name='action_post'][2]" position="replace">
+                <button name="action_post" string="Confirm" class="oe_highlight"
+                        type="object"
+                        groups="account.group_account_invoice,users_access_writes.purchase_acc_inventory_group,users_access_writes.sales_accounting_group"
+                        data-hotkey="q"
+                        context="{'validate_analytic': True}"
+                        invisible="hide_post_button or move_type == 'entry' or display_inactive_currency_warning"/>
+            </xpath>
+
+            <xpath expr="//button[@name='action_register_payment']" position="replace">
+                <button name="action_register_payment" id="account_invoice_payment_btn"
+                        type="object" class="oe_highlight"
+                        invisible="state != 'posted' or payment_state not in ('not_paid', 'partial') or move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt')"
+                        context="{'dont_redirect_to_payments': True, 'display_account_trust': True}"
+                        string="Register Payment" data-hotkey="g"
+                        groups="account.group_account_invoice,users_access_writes.purchase_acc_inventory_group"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="account_move_tree_inherit" model="ir.ui.view">
+        <field name="name">Register Payment</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//button[@name='action_register_payment']" position="replace">
+                <button name="action_register_payment" type="object" string="Register Payment"
+                        groups="account.group_account_user,users_access_writes.purchase_acc_inventory_group"
+                        invisible="context.get('default_move_type') not in ('out_invoice', 'out_refund', 'out_receipt', 'in_invoice', 'in_refund','in_receipt')"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

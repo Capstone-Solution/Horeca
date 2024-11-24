@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2018-2019 ForgeFlow, S.L.
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0) -->
+<odoo>
+  <data>
+    <record id="id_salary_advance_view_tree" model="ir.ui.view">
+      <field name="name">salary.advance.view.tree</field>
+      <field name="model">salary.advance</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="date"/>
+          <field name="deduction_date"/>
+          <field name="employee_id"/>
+          <field name="department_id"/>
+          <field name="amount"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record id="id_salary_advance_view_form" model="ir.ui.view">
+      <field name="name">salary.advance.view.form</field>
+      <field name="model">salary.advance</field>
+      <field name="arch" type="xml">
+        <form string="salary advance">
+          <header>
+            <field name="state" widget="statusbar"
+                   statusbar_visible="draft,financial_manager,general_manager,confirm,paid"/>
+<!--            states="draft"-->
+            <button name="validate_action" type="object" string="HR Validate" class="oe_highlight"
+                    invisible="state != 'draft'"
+                    groups="hr.group_hr_user"/>
+<!--            states="financial_manager"-->
+            <button name="financial_manager" type="object" string="Financial Approve" class="oe_highlight"
+                    invisible="state != 'financial_manager'"
+                    />
+<!--            states="general_manager"-->
+            <button name="general_manager" type="object" string="Manager Approve" class="oe_highlight"
+                    invisible="state != 'general_manager'"
+                    />
+<!--            states="confirm"-->
+            <button name="paid" type="object" string="Pay" class="oe_highlight"
+                    invisible="state != 'confirm'"
+                    groups="hr.group_hr_user"/>
+<!--            attrs="{'invisible': [('state', 'in', ['draft', 'rejected','paid'])]}"-->
+            <button name="rejected" type="object" string="Reject" class="oe_highlight"
+                    invisible="state in ['draft', 'rejected','paid']"/>
+<!--            states="rejected"-->
+            <button name="back_to_draft" type="object" string="Back To Draft" class="oe_highlight"
+                    invisible="state != 'rejected'"
+                    />
+          </header>
+          <sheet>
+            <div class="oe_title mb8">
+              <h1 class="o_row">
+                <field name="name"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <field name="employee_id"/>
+                <field name="company_id" invisible="1"/>
+                <field name="employee_number_for_advance"/>
+                <field name="identification_for_advance"/>
+                <field name="department_id"/>
+                <field name="amount"/>
+                <field name="reason"/>
+              </group>
+              <group>
+                <field name="date"/>
+                <field name="deduction_date"/>
+                <field name="emp_customs_analytic_id"/>
+<!--                 attrs="{'invisible': [('state', '!=', 'confirm')], 'required':[('state', '=', 'confirm')]}"-->
+                <field name="journal_id"
+                       invisible="state != 'confirm'" required="state == 'confirm'"/>
+
+                <!--                       attrs="{'required':[('state', '=', 'financial_manager')]}"/>-->
+<!--                 attrs="{'invisible': [('state', '!=', 'confirm')], 'required':[('state', '=', 'confirm')]}"-->
+                <field name="account_id"
+                      invisible="state != 'confirm'" required="state == 'confirm'"/>
+<!--                attrs="{'invisible': [('state', '!=', 'confirm')], 'required':[('state', '=', 'confirm')]}"-->
+                <field name="account_idd"
+                      invisible="state != 'confirm'" required="state == 'confirm'"/>
+<!--                attrs="{'invisible': [('journal_entry_id', '=', False)]}"-->
+                <field name="journal_entry_id"/>
+
+                <!--                <field name="account_id" attrs="{'required':[('state', '=', 'financial_manager')]}"/>-->
+                <!--                <field name="account_idd" attrs="{'required':[('state', '=', 'financial_manager')]}"/>-->
+                <field name="type"/>
+              </group>
+            </group>
+          </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="message_ids" widget="mail_thread"/>
+          </div>
+        </form>
+      </field>
+    </record>
+    <record id="id_salary_advance_view_search" model="ir.ui.view">
+      <field name="name">salary.advance.view.search</field>
+      <field name="model">salary.advance</field>
+      <field name="arch" type="xml">
+        <search string="Search salary.advance">
+          <field name="state"/>
+          <field name="name"/>
+          <field name="date"/>
+          <field name="deduction_date"/>
+          <field name="employee_id"/>
+          <field name="amount"/>
+          <field name="department_id"/>
+          <field name="journal_id"/>
+          <field name="account_id"/>
+          <field name="account_idd"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="id_salary_advance_view_action" model="ir.actions.act_window">
+      <field name="name">salary advance</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">salary.advance</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+
+
+    <!--        <menuitem-->
+    <!--            id="menu_loans__action"-->
+    <!--            sequence="1"-->
+    <!--            parent="loans_and_addvance.menu_loans_main_menu"-->
+    <!--            name="Loans And Advances"-->
+    <!--    />-->
+
+
+    <menuitem id="menu_salary_advance__action_categ" name="Salary Advance"
+              parent="resignation_request.menu_resignation_request_action" action="id_salary_advance_view_action"
+              sequence="1"
+    />
+    <!--    parent="menu_loans__action"-->
+
+    <!--        # menu for acount-->
+
+    <record id="id_salary_advance_account_view_action" model="ir.actions.act_window">
+      <field name="name">salary advance</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">salary.advance</field>
+      <field name="domain">[('state','=','confirm')]</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+
+    <!--    <menuitem id="menu_salary_advance_account_action_categ" name="Salary Advance" parent="menu_loans_acount_action"-->
+    <!--              action="id_salary_advance_account_view_action" sequence="1"/>-->
+
+  </data>
+
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="purchase.report_purchase_quotation" model="ir.actions.report">
+        <field name="name">Request for Quotation</field>
+        <field name="model">purchase.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">purchase.report_purchasequotation</field>
+        <field name="report_file">purchase.report_purchasequotation</field>
+        <field name="print_report_name">'Request for Quotation - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+        <field name="binding_type">report</field>
+        <field name="groups_id" eval="[(4, ref('purchase.group_purchase_user')), (4, ref('purchase.group_purchase_manager'))]"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,698 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* contact_leads
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-30 21:09+0000\n"
+"PO-Revision-Date: 2024-01-30 21:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__10:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__10:00
+msgid "10:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__22:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__22:00
+msgid "10:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__11:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__11:00
+msgid "11:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__23:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__23:00
+msgid "11:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__00:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__00:00
+msgid "12:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__12:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__12:00
+msgid "12:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__01:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__01:00
+msgid "1:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__13:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__13:00
+msgid "1:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__02:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__02:00
+msgid "2:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__14:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__14:00
+msgid "2:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__03:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__03:00
+msgid "3:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__15:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__15:00
+msgid "3:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__04:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__04:00
+msgid "4:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__16:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__16:00
+msgid "4:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__05:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__05:00
+msgid "5:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__17:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__17:00
+msgid "5:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__06:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__06:00
+msgid "6:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__18:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__18:00
+msgid "6:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__07:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__07:00
+msgid "7:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__19:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__19:00
+msgid "7:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__08:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__08:00
+msgid "8:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__20:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__20:00
+msgid "8:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__09:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__09:00
+msgid "9:00 AM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_end_time__21:00
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__receipt_start_time__21:00
+msgid "9:00 PM"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__ar_client_name_ar
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__ar_client_name_ar
+msgid "Arabic Name"
+msgstr "الاسم بالعربي"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__birth_date
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__birth_date
+msgid "Birth Date"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__business_anniversary
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__business_anniversary
+msgid "Business Anniversary"
+msgstr "الذكرى السنوية للنشاط"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__business_name
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__business_name
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__business_name
+msgid "Business Name"
+msgstr "اسم العميل التجاري"
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__crm_lead__payment_type__cash
+msgid "Cash"
+msgstr "كاش"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__churn_suspend_reason
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__churn_suspend_reason
+msgid "Churn Suspend Reason"
+msgstr "سبب التعليق او التوقف"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__city_id
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__city_id
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__city_id
+#: model_terms:ir.ui.view,arch_db:contact_leads.res_partner_form_inherit_fields
+msgid "City"
+msgstr "المدينة"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__client_business_type
+msgid "Client Business Type"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__client_category
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__restaurant_category
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__client_category
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__restaurant_category
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__client_category
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__restaurant_category
+msgid "Client Category"
+msgstr "تصنيف العميل"
+
+#. module: contact_leads
+#: model:ir.actions.act_window,name:contact_leads.client_city_action
+#: model:ir.ui.menu,name:contact_leads.client_city_menu
+msgid "Client City"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.actions.act_window,name:contact_leads.client_action
+msgid "Client Form"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.ui.menu,name:contact_leads.client_menu
+msgid "Client Menu"
+msgstr "قائمة العميل"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__client_type
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__client_type
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__client_type
+msgid "Client Place Type"
+msgstr "نوع مكان العميل"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__client_status
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__client_status
+msgid "Client Status"
+msgstr "حالة العميل"
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__crm_lead__client_business_type__commercial
+msgid "Commercial"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__contact_person
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__contact_person
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__contact_person
+msgid "Contact Person"
+msgstr "اسم العميل للتواصل"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__coordinates
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__coordinates
+msgid "Coordinates"
+msgstr "الاحداثيات"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__country_id
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__country_id
+#: model_terms:ir.ui.view,arch_db:contact_leads.res_partner_form_inherit_fields
+msgid "Country"
+msgstr "الدولة"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_area_type__create_uid
+#: model:ir.model.fields,field_description:contact_leads.field_client_category__create_uid
+#: model:ir.model.fields,field_description:contact_leads.field_client_city__create_uid
+#: model:ir.model.fields,field_description:contact_leads.field_client_type__create_uid
+#: model:ir.model.fields,field_description:contact_leads.field_job_title__create_uid
+#: model:ir.model.fields,field_description:contact_leads.field_onground_support__create_uid
+#: model:ir.model.fields,field_description:contact_leads.field_restaurant_category__create_uid
+#: model:ir.model.fields,field_description:contact_leads.field_sales_channel__create_uid
+#: model:ir.model.fields,field_description:contact_leads.field_sales_support__create_uid
+#: model:ir.model.fields,field_description:contact_leads.field_tele_sales__create_uid
+#: model:ir.model.fields,field_description:contact_leads.field_telesales_support__create_uid
+#: model:ir.model.fields,field_description:contact_leads.field_vendor_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_area_type__create_date
+#: model:ir.model.fields,field_description:contact_leads.field_client_category__create_date
+#: model:ir.model.fields,field_description:contact_leads.field_client_city__create_date
+#: model:ir.model.fields,field_description:contact_leads.field_client_type__create_date
+#: model:ir.model.fields,field_description:contact_leads.field_job_title__create_date
+#: model:ir.model.fields,field_description:contact_leads.field_onground_support__create_date
+#: model:ir.model.fields,field_description:contact_leads.field_restaurant_category__create_date
+#: model:ir.model.fields,field_description:contact_leads.field_sales_channel__create_date
+#: model:ir.model.fields,field_description:contact_leads.field_sales_support__create_date
+#: model:ir.model.fields,field_description:contact_leads.field_tele_sales__create_date
+#: model:ir.model.fields,field_description:contact_leads.field_telesales_support__create_date
+#: model:ir.model.fields,field_description:contact_leads.field_vendor_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__credit_limit_amount
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__credit_limit_amount
+msgid "Credit Limit Amount"
+msgstr "مبلغ الحد الائتماني"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__credit_limit_period_in_days
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__credit_limit_period_in_days
+msgid "Credit Limit Period (Days)"
+msgstr "فترة الحد الائتماني بالأيام"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__discount
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__discount
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__discount
+msgid "Discount"
+msgstr "نسبة الخصم"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_area_type__display_name
+#: model:ir.model.fields,field_description:contact_leads.field_client_category__display_name
+#: model:ir.model.fields,field_description:contact_leads.field_client_city__display_name
+#: model:ir.model.fields,field_description:contact_leads.field_client_type__display_name
+#: model:ir.model.fields,field_description:contact_leads.field_job_title__display_name
+#: model:ir.model.fields,field_description:contact_leads.field_onground_support__display_name
+#: model:ir.model.fields,field_description:contact_leads.field_restaurant_category__display_name
+#: model:ir.model.fields,field_description:contact_leads.field_sales_channel__display_name
+#: model:ir.model.fields,field_description:contact_leads.field_sales_support__display_name
+#: model:ir.model.fields,field_description:contact_leads.field_tele_sales__display_name
+#: model:ir.model.fields,field_description:contact_leads.field_telesales_support__display_name
+#: model:ir.model.fields,field_description:contact_leads.field_vendor_type__display_name
+msgid "Display Name"
+msgstr "عرض الاسم"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__email
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__en_client_name_en
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__en_client_name_en
+msgid "English Name"
+msgstr "اسم العميل بالانجليزية "
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__crm_lead__gender__female
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__gender__female
+msgid "Female"
+msgstr "أنثى"
+
+#. module: contact_leads
+#: model:ir.model.fields,help:contact_leads.field_res_partner__coordinates
+#: model:ir.model.fields,help:contact_leads.field_res_users__coordinates
+msgid "Format: \"30.0597076,31.2242059\""
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__gender
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__gender
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__gender
+msgid "Gender"
+msgstr "النوع"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__google_map_link
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__google_map_link
+msgid "Google Map Link"
+msgstr "رابط جوجل ماب"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__state_id
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__state_id
+#: model_terms:ir.ui.view,arch_db:contact_leads.res_partner_form_inherit_fields
+msgid "Government"
+msgstr "المحافظة "
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_area_type__id
+#: model:ir.model.fields,field_description:contact_leads.field_client_category__id
+#: model:ir.model.fields,field_description:contact_leads.field_client_city__id
+#: model:ir.model.fields,field_description:contact_leads.field_client_type__id
+#: model:ir.model.fields,field_description:contact_leads.field_job_title__id
+#: model:ir.model.fields,field_description:contact_leads.field_onground_support__id
+#: model:ir.model.fields,field_description:contact_leads.field_restaurant_category__id
+#: model:ir.model.fields,field_description:contact_leads.field_sales_channel__id
+#: model:ir.model.fields,field_description:contact_leads.field_sales_support__id
+#: model:ir.model.fields,field_description:contact_leads.field_tele_sales__id
+#: model:ir.model.fields,field_description:contact_leads.field_telesales_support__id
+#: model:ir.model.fields,field_description:contact_leads.field_vendor_type__id
+msgid "ID"
+msgstr "الرقم القومي"
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__crm_lead__client_business_type__individual
+msgid "Individual"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__job_title
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__job_title
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__job_title
+msgid "Job Title"
+msgstr "وظيفته"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_area_type__write_uid
+#: model:ir.model.fields,field_description:contact_leads.field_client_category__write_uid
+#: model:ir.model.fields,field_description:contact_leads.field_client_city__write_uid
+#: model:ir.model.fields,field_description:contact_leads.field_client_type__write_uid
+#: model:ir.model.fields,field_description:contact_leads.field_job_title__write_uid
+#: model:ir.model.fields,field_description:contact_leads.field_onground_support__write_uid
+#: model:ir.model.fields,field_description:contact_leads.field_restaurant_category__write_uid
+#: model:ir.model.fields,field_description:contact_leads.field_sales_channel__write_uid
+#: model:ir.model.fields,field_description:contact_leads.field_sales_support__write_uid
+#: model:ir.model.fields,field_description:contact_leads.field_tele_sales__write_uid
+#: model:ir.model.fields,field_description:contact_leads.field_telesales_support__write_uid
+#: model:ir.model.fields,field_description:contact_leads.field_vendor_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_area_type__write_date
+#: model:ir.model.fields,field_description:contact_leads.field_client_category__write_date
+#: model:ir.model.fields,field_description:contact_leads.field_client_city__write_date
+#: model:ir.model.fields,field_description:contact_leads.field_client_type__write_date
+#: model:ir.model.fields,field_description:contact_leads.field_job_title__write_date
+#: model:ir.model.fields,field_description:contact_leads.field_onground_support__write_date
+#: model:ir.model.fields,field_description:contact_leads.field_restaurant_category__write_date
+#: model:ir.model.fields,field_description:contact_leads.field_sales_channel__write_date
+#: model:ir.model.fields,field_description:contact_leads.field_sales_support__write_date
+#: model:ir.model.fields,field_description:contact_leads.field_tele_sales__write_date
+#: model:ir.model.fields,field_description:contact_leads.field_telesales_support__write_date
+#: model:ir.model.fields,field_description:contact_leads.field_vendor_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "عميل مهتم/فرصة "
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__crm_lead__gender__male
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__gender__male
+msgid "Male"
+msgstr "ذكر"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__management_address
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__management_address
+msgid "Management Address"
+msgstr "عنوان التحصيل"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__mobile
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__mobile
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__mobile
+msgid "Mobile"
+msgstr "الهاتف المحمول"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__national_id
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__national_id
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__national_id
+msgid "National ID"
+msgstr "الرقم القومي"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__onground_support
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__onground_support
+msgid "Onground Support"
+msgstr "الدعم على الأرض"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__payment_type
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__payment_type
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__payment_type
+msgid "Payment Type"
+msgstr "نوع الدفع"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__phone
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__phone
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__phone
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__crm_lead__payment_type__postpaid
+msgid "Postpaid"
+msgstr "اجل"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__receipt_end_time
+msgid "Receipt End Time"
+msgstr "وقت انتهاء الاستلام"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__receipt_start_time
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__receipt_end_time
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__receipt_start_time
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__receipt_end_time
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__receipt_start_time
+msgid "Receipt Start Time"
+msgstr "وقت بدء الاستلام"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__sales_channel
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__sales_channel
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__sales_channel
+msgid "Sales Channel"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__sales_person
+msgid "Sales Person"
+msgstr "قناة البيع"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__sales_support
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__sales_support
+msgid "Sales Support"
+msgstr "الدعم عبر الهاتف"
+
+#. module: contact_leads
+#: model:ir.model.fields,help:contact_leads.field_res_partner__google_map_link
+#: model:ir.model.fields,help:contact_leads.field_res_users__google_map_link
+msgid "Should start with \"https://maps.app.goo.gl/\""
+msgstr "يجب أن تبدأ بـ "https://maps.app.goo.gl/\"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__street
+msgid "Street"
+msgstr "الشارع"
+
+#. module: contact_leads
+#: model_terms:ir.ui.view,arch_db:contact_leads.res_partner_form_inherit_fields
+msgid "Street 2..."
+msgstr "الشارع 2"
+
+#. module: contact_leads
+#: model_terms:ir.ui.view,arch_db:contact_leads.res_partner_form_inherit_fields
+msgid "Street..."
+msgstr "الشارع .."
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__street2
+msgid "Street2"
+msgstr "الشارع 2"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__telesales
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__telesales
+msgid "Telesales"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__telesales_support
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__telesales_support
+msgid "Telesales Support"
+msgstr "المبيعات عبر الهاتف"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__vendor
+#: model:ir.model.fields,field_description:contact_leads.field_res_partner__vendor
+#: model:ir.model.fields,field_description:contact_leads.field_res_users__vendor
+msgid "Vendor"
+msgstr "تابع لشركة"
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_crm_lead__zip
+msgid "Zip"
+msgstr "الرمز البريدي"
+
+#. module: contact_leads
+#: model_terms:ir.ui.view,arch_db:contact_leads.res_partner_form_inherit_fields
+msgid "area"
+msgstr "المنطقة"
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_area_type
+msgid "area.type"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_client_category
+msgid "client.category"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_client_city
+msgid "client.city"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_client_type
+msgid "client.type"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_job_title
+msgid "job.title"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields,field_description:contact_leads.field_area_type__name
+#: model:ir.model.fields,field_description:contact_leads.field_client_category__name
+#: model:ir.model.fields,field_description:contact_leads.field_client_city__name
+#: model:ir.model.fields,field_description:contact_leads.field_client_type__name
+#: model:ir.model.fields,field_description:contact_leads.field_job_title__name
+#: model:ir.model.fields,field_description:contact_leads.field_onground_support__name
+#: model:ir.model.fields,field_description:contact_leads.field_restaurant_category__name
+#: model:ir.model.fields,field_description:contact_leads.field_sales_channel__name
+#: model:ir.model.fields,field_description:contact_leads.field_sales_support__name
+#: model:ir.model.fields,field_description:contact_leads.field_tele_sales__name
+#: model:ir.model.fields,field_description:contact_leads.field_telesales_support__name
+#: model:ir.model.fields,field_description:contact_leads.field_vendor_type__name
+msgid "name"
+msgstr "الاسم"
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_onground_support
+msgid "onground.support"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_restaurant_category
+msgid "restaurant.category"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_sales_channel
+msgid "sales.channel"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_sales_support
+msgid "sales.support"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_tele_sales
+msgid "tele.sales"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_telesales_support
+msgid "telesales.support"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model,name:contact_leads.model_vendor_type
+msgid "vendor.type"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__payment_type__postpaid
+msgid "اجل"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__client_status__inactive
+msgid "غير نشط"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__payment_type__cash
+msgid "كاش"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__client_status__churn
+msgid "متوقف"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__client_status__suspended
+msgid "معلق"
+msgstr ""
+
+#. module: contact_leads
+#: model:ir.model.fields.selection,name:contact_leads.selection__res_partner__client_status__active
+msgid "نشط"
+msgstr ""

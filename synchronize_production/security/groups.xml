@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="group_admin_only" model="res.groups">
+        <field name="name">Admin Only Group</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_erp_manager'))]"/>
+    </record>
+    <record id="group_state" model="res.groups">
+        <field name="name">أمكانية تغيير حالة العميل</field>
+    </record>
+    <record id="group_show_area" model="res.groups">
+        <field name="name">ادخال المناطق</field>
+    </record>
+    <record id="group_job_title" model="res.groups">
+        <field name="name">ادخال المسمي الوظيفي</field>
+    </record>
+    <record id="group_client_type" model="res.groups">
+        <field name="name">ادخال مكان العميل</field>
+    </record>
+    <record id="group_restaurant_category" model="res.groups">
+        <field name="name">ادخال تصنيف المطعم</field>
+    </record>
+    <record id="group_belongs_to_company_action" model="res.groups">
+        <field name="name">ادخال تابع لشركة</field>
+    </record>
+    <record id="group_sales_channel" model="res.groups">
+        <field name="name">ادخال قنوات البيع</field>
+    </record>
+
+</odoo>

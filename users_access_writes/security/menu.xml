@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Sales Menu -->
+    <menuitem id="sale.menu_sale_quotations"
+              parent="sale.sale_order_menu"
+              action="sale.action_quotations_with_onboarding"
+              groups="sales_team.group_sale_salesman,users_access_writes.own_document_only_group"
+              sequence="10"/>
+
+    <menuitem id="sale.menu_sale_report"
+              parent="sale.sale_menu_root"
+              name="Reporting"
+              groups="sales_team.group_sale_manager,users_access_writes.sales_manager_sec_group,users_access_writes.sales_accounting_group"
+              sequence="40"/>
+
+    <menuitem
+            id="crm.crm_menu_report"
+            name="Reporting"
+            parent="crm.crm_menu_root"
+            sequence="20"
+            groups="sales_team.group_sale_salesman,users_access_writes.sales_manager_sec_group"/>
+
+    <menuitem id="sale.menu_sale_order"
+              parent="sale.sale_order_menu"
+              name="Orders"
+              action="sale.action_orders"
+              groups="sales_team.group_sale_salesman,users_access_writes.own_document_only_group"
+              sequence="20"/>
+
+    <menuitem id="sale.product_menu_catalog"
+              parent="sale.sale_menu_root"
+              name="Products"
+              groups="sales_team.group_sale_salesman,users_access_writes.own_document_only_group,users_access_writes.sales_accounting_group"
+              sequence="30"/>
+
+    <menuitem id="sale.menu_product_template_action"
+              parent="sale.product_menu_catalog"
+              action="sale.product_template_action"
+              sequence="10"
+              groups="users_access_writes.own_document_only_group,users_access_writes.sales_accounting_group"
+    />
+
+    <menuitem id="sale.menu_product_pricelist_main"
+              name="Pricelists"
+              parent="sale.product_menu_catalog"
+              action="product.product_pricelist_action2"
+              groups="product.group_product_pricelist,users_access_writes.own_document_only_group"
+              sequence="30"/>
+    <!-- End Sales Menu -->
+
+    <!--  Crm Menu -->
+    <menuitem id="crm.crm_menu_root"
+              name="CRM"
+              web_icon="crm,static/description/icon.png"
+              groups="sales_team.group_sale_salesman,sales_team.group_sale_manager,users_access_writes.sales_manager_sec_group,users_access_writes.own_document_only_group"
+              sequence="25"/>
+
+    <menuitem id="crm.crm_menu_sales"
+              name="Sales"
+              parent="crm.crm_menu_root"
+              groups="users_access_writes.sales_manager_sec_group,users_access_writes.own_document_only_group"
+              sequence="1"/>
+
+    <menuitem
+            id="crm.res_partner_menu_customer"
+            name="Customers"
+            parent="crm.crm_menu_sales"
+            action="base.action_partner_form"
+            groups="sales_team.group_sale_manager,users_access_writes.sales_manager_sec_group"
+            sequence="5"/>
+
+    <menuitem
+            id="crm.crm_lead_menu_my_activities"
+            name="My Activities"
+            parent="crm.crm_menu_sales"
+            groups="sales_team.group_sale_salesman,users_access_writes.sales_manager_sec_group,users_access_writes.own_document_only_group"
+            action="crm.crm_lead_action_my_activities"
+            sequence="2"/>
+
+    <menuitem id="crm.sales_team_menu_team_pipeline"
+              name="Teams"
+              parent="crm.crm_menu_sales"
+              action="sales_team.crm_team_action_pipeline"
+              groups="sales_team.group_sale_manager,users_access_writes.sales_manager_sec_group"
+              sequence="4"/>
+
+    <!-- End Crm Menu -->
+
+    <!-- Top menu item -->
+    <menuitem id="purchase.menu_purchase_root"
+              name="Purchase"
+              groups="purchase.group_purchase_manager,purchase.group_purchase_user,users_access_writes.purchase_fleet_accounting_group,users_access_writes.purchase_acc_inventory_group"
+    />
+
+    <menuitem id="purchase.menu_procurement_management" name="Orders"
+            parent="purchase.menu_purchase_root" sequence="1"
+              groups="users_access_writes.purchase_fleet_accounting_group,users_access_writes.purchase_acc_inventory_group"
+    />
+
+    <menuitem
+            action="purchase.purchase_form_action"
+            id="purchase.menu_purchase_form_action"
+            parent="purchase.menu_procurement_management"
+            groups="users_access_writes.purchase_acc_inventory_group,users_access_writes.purchase_acc_inventory_group"
+            sequence="6"
+    />
+    <menuitem id="purchase.menu_purchase_products"
+              name="Products"
+              parent="purchase.menu_purchase_root"
+              groups="purchase.group_purchase_manager,purchase.group_purchase_user"
+              sequence="5"/>
+
+    <menuitem action="purchase.purchase_rfq" id="purchase.menu_purchase_rfq"
+              parent="purchase.menu_procurement_management"
+              groups="purchase.group_purchase_manager,purchase.group_purchase_user,users_access_writes.purchase_acc_inventory_group"
+              sequence="0"/>
+
+    <menuitem
+            name="Fleet"
+            id="fleet.menu_root"
+            sequence="220"
+            groups="fleet.fleet_group_user,users_access_writes.purchase_fleet_accounting_group"
+            web_icon="fleet,static/description/icon.png"
+    />
+
+    <menuitem
+            name="Fleet"
+            parent="fleet.menu_root"
+            id="fleet.fleet_vehicles"
+            sequence="2"
+            groups="fleet.fleet_group_user,users_access_writes.purchase_fleet_accounting_group"
+    />
+
+    <menuitem
+            action="fleet.fleet_vehicle_action"
+            parent="fleet.fleet_vehicles"
+            name="Fleet"
+            id="fleet.fleet_vehicle_menu"
+            groups="fleet.fleet_group_user,users_access_writes.purchase_fleet_accounting_group"
+            sequence="0"
+    />
+
+    <menuitem
+            action="fleet.fleet_vehicle_log_contract_action"
+            parent="fleet.fleet_vehicles"
+            id="fleet.fleet_vehicle_log_contract_menu"
+            groups="fleet.fleet_group_user,users_access_writes.purchase_fleet_accounting_group"
+            sequence="2"
+    />
+
+    <menuitem
+            action="fleet.fleet_vehicle_log_services_action"
+            parent="fleet.fleet_vehicles"
+            id="fleet.fleet_vehicle_log_services_menu"
+            groups="fleet.fleet_group_user,users_access_writes.purchase_fleet_accounting_group"
+            sequence="3"/>
+
+    <menuitem
+            action="fleet.fleet_vehicle_odometer_action"
+            parent="fleet.fleet_vehicles"
+            id="fleet.fleet_vehicle_odometer_menu"
+            groups="fleet.fleet_group_user,users_access_writes.purchase_fleet_accounting_group"
+            sequence="10"/>
+
+    <menuitem id="sale.menu_sale_invoicing"
+              parent="sale.sale_menu_root"
+              name="To Invoice"
+              groups="sales_team.group_sale_salesman,users_access_writes.sales_accounting_group"
+              sequence="20"
+    />
+
+    <menuitem id="sale.menu_sale_order_invoice"
+              parent="sale.menu_sale_invoicing"
+              groups="sales_team.group_sale_salesman,users_access_writes.sales_accounting_group"
+              action="sale.action_orders_to_invoice"
+              sequence="10"/>
+
+
+    <menuitem id="account.menu_board_journal_1"
+              parent="account.menu_finance"
+              groups="account.group_account_invoice,account.group_account_manager,users_access_writes.purchase_acc_inventory_group"
+              name="Dashboard"
+              action="account.open_account_journal_dashboard_kanban"
+              sequence="1"/>
+
+    <menuitem id="account.menu_finance_receivables"
+              parent="account.menu_finance"
+              groups="account.group_account_invoice,account.group_account_manager,users_access_writes.sales_accounting_group"
+              name="Customers"
+              sequence="2"/>
+
+    <menuitem id="account.menu_finance_payables"
+              parent="account.menu_finance"
+              groups="account.group_account_invoice,account.group_account_manager,users_access_writes.purchase_acc_inventory_group"
+              name="Vendors"
+              sequence="3"/>
+
+    <menuitem id="account.menu_finance_entries"
+              parent="account.menu_finance"
+              name="Accounting"
+              sequence="4"
+              groups="account.group_account_invoice,account.group_account_manager,users_access_writes.purchase_acc_inventory_group,users_access_writes.sales_accounting_group"/>
+
+    <menuitem id="account.menu_finance_reports"
+              parent="account.menu_finance"
+              name="Reporting"
+              sequence="20"
+              groups="account.group_account_readonly,account.group_account_invoice,users_access_writes.purchase_acc_inventory_group,users_access_writes.sales_accounting_group"/>
+
+    <menuitem id="account.account_reports_legal_statements_menu"
+              parent="account.menu_finance_reports"
+              name="Statement Reports"
+              sequence="1"
+              groups="account.group_account_invoice,account.group_account_manager"/>
+
+    <menuitem id="account_reports.account_reports_audit_reports_menu"
+              name="Audit Reports"
+              parent="account.menu_finance_reports"
+              groups="account.group_account_invoice,account.group_account_manager,users_access_writes.purchase_acc_inventory_group,users_access_writes.sales_accounting_group"
+              sequence="2"/>
+
+    <menuitem id="account_reports.menu_action_account_report_general_ledger"
+              parent="account_reports.account_reports_audit_reports_menu"
+              name="General Ledger"
+              action="account_reports.action_account_report_general_ledger"
+              groups="account.group_account_readonly,users_access_writes.purchase_acc_inventory_group,users_access_writes.sales_accounting_group"/>
+
+    <menuitem id="account.account_reports_management_menu"
+              parent="account.menu_finance_reports"
+              groups="account.group_account_invoice,account.group_account_manager"
+              name="Management"
+              sequence="4"/>
+
+    <menuitem id="account_reports.menu_action_account_report_aged_receivable"
+              parent="account_reports.account_reports_partners_reports_menu"
+              name="Aged Receivable" action="account_reports.action_account_report_ar"
+              groups="account.group_account_invoice,account.group_account_manager"/>
+
+    <menuitem id="account_reports.menu_action_account_report_aged_payable"
+              parent="account_reports.account_reports_partners_reports_menu"
+              name="Aged Payable" action="account_reports.action_account_report_ap"
+              groups="account.group_account_invoice,account.group_account_manager"/>
+
+    <!-- Top menu item -->
+    <menuitem name="Invoicing"
+              id="account.menu_finance"
+              groups="account.group_account_readonly,account.group_account_invoice,users_access_writes.purchase_acc_inventory_group,users_access_writes.sales_accounting_group"
+              web_icon="account,static/description/icon.png"
+              sequence="55"/>
+
+    <menuitem name="Accounting"
+              id="account_accountant.menu_accounting"
+              groups="account.group_account_readonly,account.group_account_invoice,users_access_writes.purchase_acc_inventory_group,users_access_writes.sales_accounting_group"
+              web_icon="account_accountant,static/description/icon.png"
+              sequence="60"/>
+
+    <menuitem id="account.menu_action_move_journal_line_form"
+              parent="account.menu_finance_entries_accounting_miscellaneous"
+              action="account.action_move_journal_line"
+              groups="account.group_account_readonly,users_access_writes.purchase_acc_inventory_group,users_access_writes.sales_accounting_group"
+              sequence="1"/>
+
+    <menuitem id="account_reports.menu_action_account_report_partner_ledger"
+              parent="account_reports.account_reports_partners_reports_menu"
+              name="Partner Ledger"
+              action="account_reports.action_account_report_partner_ledger"
+              groups="account.group_account_readonly,users_access_writes.purchase_acc_inventory_group,users_access_writes.sales_accounting_group"/>
+
+    <menuitem id="sale.menu_products"
+              parent="sale.product_menu_catalog"
+              action="product.product_normal_action_sell"
+              groups="users_access_writes.sales_product_variants_access"
+              sequence="20"/>
+
+    <menuitem name="Inventory" id="stock.menu_stock_root" sequence="140"
+              groups="stock.group_stock_manager,stock.group_stock_user,users_access_writes.purchase_acc_inventory_group"
+              web_icon="stock,static/description/icon.png"/>
+
+    <menuitem id="stock.in_picking" name="Receipts" parent="stock.menu_stock_transfers"
+              action="stock.action_picking_tree_incoming" sequence="20"
+              groups="stock.group_stock_manager,stock.group_stock_user,users_access_writes.purchase_acc_inventory_group"/>
+
+    <menuitem id="stock.out_picking" name="Deliveries" parent="stock.menu_stock_transfers"
+              action="stock.action_picking_tree_outgoing" sequence="21"
+              groups="stock.group_stock_manager,stock.group_stock_user,users_access_writes.purchase_acc_inventory_group"/>
+
+    <menuitem id="stock.int_picking" name="Internal" parent="stock.menu_stock_transfers"
+              action="stock.action_picking_tree_internal" sequence="22"
+              groups="stock.group_stock_multi_locations,users_access_writes.purchase_acc_inventory_group"/>
+
+    <menuitem id="stock.menu_stock_adjustments" name="Adjustments" parent="stock.menu_stock_warehouse_mgmt" sequence="2"
+    groups="stock.group_stock_manager,stock.group_stock_user"
+    />
+
+    <menuitem action="stock.action_procurement_compute" id="stock.menu_procurement_compute"
+              parent="stock.menu_stock_warehouse_mgmt" sequence="135" groups="stock.group_stock_manager,stock.group_stock_user"/>
+
+    <menuitem id="stock.menu_warehouse_report" name="Reporting" sequence="99" parent="stock.menu_stock_root"
+              groups="stock.group_stock_manager,users_access_writes.purchase_acc_inventory_group"/>
+
+    <menuitem id="purchase.purchase_report" name="Purchase" parent="purchase.purchase_report_main" sequence="99"
+              groups="purchase.group_purchase_manager,users_access_writes.purchase_acc_inventory_group,users_access_writes.purchase_fleet_accounting_group"
+              action="purchase.action_purchase_order_report_all"
+    />
+     <menuitem id="purchase.purchase_report_main" name="Reporting" parent="purchase.menu_purchase_root" sequence="99"
+               groups="purchase.group_purchase_manager,users_access_writes.purchase_acc_inventory_group,users_access_writes.purchase_fleet_accounting_group"
+     />
+</odoo>

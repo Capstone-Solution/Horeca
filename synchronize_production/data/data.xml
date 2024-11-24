@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="seq_cus_payment_serial" model="ir.sequence">
+            <field name="name">Customer Serial</field>
+            <field name="code">customer.serial</field>
+            <field name="prefix">CUS</field>
+            <field name="padding">5</field>
+        </record>
+
+         <record id="seq_vend_payment_serial" model="ir.sequence">
+            <field name="name">Vendor Serial</field>
+            <field name="code">vendor.serial</field>
+            <field name="prefix">VEN</field>
+            <field name="padding">5</field>
+        </record>
+    </data>
+</odoo>

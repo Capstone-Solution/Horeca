@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Inherit Form View to Modify it -->
+    <record id="view_partner_form_inherit_helpdesk_one" model="ir.ui.view">
+        <field name="name">smart action</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="helpdesk.view_partner_form_inherit_helpdesk"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//button[@name='action_open_helpdesk_ticket']" position="replace">
+                <button class="oe_stat_button" type="object"
+                        groups="helpdesk.group_helpdesk_user,users_access_writes.purchase_acc_inventory_group,users_access_writes.sales_accounting_group"
+                        name="action_open_helpdesk_ticket"
+                        context="{'default_partner_id': id, 'default_team_id': False}" icon="fa-life-ring"
+                        invisible="ticket_count == 0">
+                    <div class="o_stat_info">
+                        <field name="ticket_count" class="o_stat_value"/>
+                        <span class="o_stat_text">Tickets</span>
+                    </div>
+                </button>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_client_category,client.category,model_client_category,base.group_user,1,1,1,1
+access_restaurant_category,restaurant.category,model_restaurant_category,base.group_user,1,1,1,1
+access_job_title,job.title,model_job_title,base.group_user,1,1,1,1
+access_client_type,client.type,model_client_type,base.group_user,1,1,1,1
+access_area_type,area.type,model_area_type,base.group_user,1,1,1,1
+access_tele_sales,tele.sales,model_tele_sales,base.group_user,1,1,1,1
+access_sales_support,sales.support,model_sales_support,base.group_user,1,1,1,1
+access_vendor_type,vendor.type,model_vendor_type,base.group_user,1,1,1,1
+access_sales_channel,sales.channel,model_sales_channel,base.group_user,1,1,1,1
+access_telesales_support,telesales.support,model_telesales_support,base.group_user,1,1,1,1
+access_onground_support,onground.support,model_onground_support,base.group_user,1,1,1,1
+contact_leads.access_area,access_area,contact_leads.model_area,base.group_user,1,1,1,1
+
